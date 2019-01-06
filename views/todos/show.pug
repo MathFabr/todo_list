@@ -1,0 +1,26 @@
+html
+    head
+        title= title
+    body
+        h1 Bonjour 
+       
+        
+
+        ul 
+            li= todo.message
+            li= todo.completion
+            li= todo.created_at
+            li= todo.updated_at
+            br
+
+            form(method="POST", action=`/todos/${todo.id}?_method=DELETE`)
+                    input(type="submit", value="Delete")
+            br
+            br
+
+        
+
+            form(method="POST", action=`/todos/${todo.id}?_method=PATCH`)
+                input(type="submit", value="Tache terminée")
+
+        a(href="/todos") Retour

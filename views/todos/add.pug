@@ -1,0 +1,14 @@
+html
+    head
+        title= title
+    body
+        h1 Ajouter une nouvelle tache.
+        form(name="add-estimation", method="post" action="/todos")
+            div.input
+                 span.label Votre taches :
+                 input(type="text", name="message", required)
+            div.actions
+                 input(type="submit", value="publier")
+
+        a(href="/todos") Annuler
+

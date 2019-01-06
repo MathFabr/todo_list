@@ -1,0 +1,26 @@
+html
+    head
+        title= title
+    body
+
+        a(href="/users/edit") S'enregistrer 
+        br
+        a(href="/users") Voir les utilisateurs enregistrer
+        h1 Bonjour 
+       
+        
+
+        ul
+            each val in todo 
+                li= val.message
+                li= val.completion
+                
+
+                a(href="/todos/" + val.id) show
+                br
+               
+
+
+        a(href="/todos/add") ajouter une todos
+
+

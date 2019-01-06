@@ -1,0 +1,14 @@
+html
+    head
+        title= title
+    body
+        h1 utilisateurs enregistrer:
+
+    ul
+        each val in user
+            li= val.username
+            a(href="/users/" + val.id) show
+            br
+            br
+
+    a(href="/todos") Retour       

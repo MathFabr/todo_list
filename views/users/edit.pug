@@ -1,0 +1,20 @@
+html
+    head
+        title= title
+    body
+        h1 Vous pouvez vous enregistrer:
+
+        form(name="add-estimation", method="post" action="/users")
+            div.input
+                span.label Nom:
+                    input(type="text", name="firstname", required)
+                span.label Prénom:
+                    input(type="text", name="lastname", required)
+                span.label Pseudo :
+                    input(type="text", name="username", required)
+                span.label Email:
+                    input(type="email", name="password", required)
+                span.label Mot de passe:
+                    input(type="password", name="password", required)
+            div.actions
+                input(type="submit", value="publier")

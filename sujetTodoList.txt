@@ -1,0 +1,57 @@
+SUJET TODOLIST :
+
+Pour le 6 Janvier 2019 à 23h59 dernier delais, vous me rendrez la todolist que nous avons commencé en cours, les binomes sont autorisés. Le rendu sera un repos GIT avec un README explicite. Si vous rendez après 23h59 il n'y aura pas de contestation possible ça sera 0 !!!
+
+Les tables suivantes sont celles à implémentées :
+  todos: 
+    message, completion, updatedAt, createdAt, userId
+  users:
+    firstname, lastname, username, password, email, createdAt, updatedAt
+
+Pour le mot de passe de l'utilisateur vous utiliserez bcrypt sur npm. Vous entrerez un mot de passe sous forme de hash en BDD à la création.
+cf: https://www.npmjs.com/package/bcrypt
+
+Les dates sont compliquées à gerer en Javascript n'hésitez pas à utiliser MomentJS si vous bloquez trop.
+cf: https://momentjs.com/
+
+Pour la majorité de ces routes vous utiliserez le multi-format: res.format().
+En format JSON vous utiliserez: res.json().
+
+Pour verifier le bon fonctionnement de vos routes en JSON sur Postman pensez à bien mettre les headers suivant: 
+  - Content-Type: application/json
+  - Accept: application/json
+
+Un crud doit être implémenté pour chacunes de ces ressources: 
+  - GET /ressources: 
+    - JSON: Renvoi le contenus de la requêtes sql
+    - HTML: affiche la page index.tpl
+  - GET /ressources/:id
+    - JSON: Renvoi le contenus de la requêtes sql
+    - HTML: affiche la page show.tpl
+  - POST /ressources
+    - JSON: {message : 'sucess'}
+    - HTML: redirect sur index.tpl
+  - PUT/PATCH /ressources/:id
+    - JSON: {message : 'sucess'}
+    - HTML: redirect sur index.tpl
+  - DELETE /ressources/:id
+    - JSON: {message : 'sucess'}
+    - HTML: redirect sur index.tpl
+  - GET /ressources/add
+    - HTML: afficher un formulaire
+  - GET /ressources/:id/edit
+    - HTML: afficher le même formulaire que pour /add
+  - GET /users/:id/todos
+    - JSON: renvoi les todos de l'utilisateur
+    - HTML: affiche un tableau des todos de l'utilisateur
+
+
+Un middleware de 404 sera necessaire pour toutes les requêtes qui n'arrive pas à destination: 
+ - JSON: {status: 404 not found}
+ - HTML: une page de 404 
+
+
+Pour les formulaires avec une méthode autre que GET et POST vous aurez besoin du module methode overide sur npm dans la section 'override using a query value'.
+cf: https://www.npmjs.com/package/method-override
+
+Des points de style seront attribués pour vous faciliter la tache les frameworks CSS sont autorisés.
