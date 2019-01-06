@@ -3,9 +3,6 @@ const express = require('express')
 const db = require('sqlite')
 const moment = require('moment')
 const methodOverRide = require('method-override')
-const bcrypt = require('bcrypt')
-
-const saltRounds = 10
 
 const app = express()
 

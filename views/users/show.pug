@@ -8,6 +8,7 @@ html
         li= user.firstname
         li= user.lastname
         li= user.username
+        li= user.email
 
         form(method="POST", action=`/users/${user.id}?_method=DELETE`)
             input(type="submit", value="Delete")
